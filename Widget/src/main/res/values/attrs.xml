@@ -69,8 +69,6 @@
 
     <!--编辑框控件-->
     <declare-styleable name="widget_edit">
-        <!-- 组件标题-->
-        <attr name="title_edit" format="string"/>
         <!--输入长度-->
         <attr name="textLenght" format="integer"/>
         <!--输入类型--><!-- 0:普通字符；1：正整数；2：整数（正负数）3：正数（小数）；4自然数（正负）-->

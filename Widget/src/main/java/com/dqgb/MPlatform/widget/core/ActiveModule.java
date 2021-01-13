@@ -7,7 +7,7 @@ import android.view.View;
  * @author Mryang
  * @Date 2021/1/11
  */
-public interface ActiveModule {
+public interface ActiveModule extends Module{
     /**
      * 获取布局资源
      */
@@ -18,6 +18,11 @@ public interface ActiveModule {
      * @param editable 是否可编辑
      */
     void setEnable(boolean editable);
+
+    /**
+     * 渲染视图
+     */
+    void inflateView();
 
     /**
      * 初始化控件

@@ -1,6 +1,7 @@
 package com.dqgb.MPlatform.widget.core;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -21,13 +22,17 @@ import java.util.stream.Stream;
 /**
  * 输入型组件
  */
-public  abstract class InputModule extends LinearLayout implements ActiveModule{
+public  abstract class InputModule extends BaseActModule implements ActiveModule{
+
+    protected float textSize;       //自定义字体大小
+    protected int textColor;        //自定义字体颜色
+    protected String  hint = "";       //提示信息
+    protected int  hintColor;       //提示信息字体颜色
+
 
     protected List<SubOberver> obervers;
 
     EditText mEditText;
-
-    boolean required = true;       //是否必填
 
     public InputModule(Context context,boolean NotInit) {
         super(context);
@@ -35,21 +40,25 @@ public  abstract class InputModule extends LinearLayout implements ActiveModule{
 
     public InputModule(Context context) {
         super(context);
-        initModule();
     }
 
     public InputModule(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initModule();
+    }
+
+    @Override
+    public void applyAttrs(Context context, @Nullable AttributeSet attrs) {
+        super.applyAttrs(context, attrs);
+        TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.common_module_option);
+        textSize=typedArray.getDimension(R.styleable.common_module_option_module_text_size,getContext().getResources().getDimension(R.dimen.font_16));
+        textColor=typedArray.getColor(R.styleable.common_module_option_module_text_color, getContext().getResources().getColor(R.color.black_100));
+        hint = typedArray.getString(R.styleable.common_module_option_module_hint);
+        hintColor=typedArray.getColor(R.styleable.common_module_option_module_hint_color, getContext().getResources().getColor(R.color.black_65));
     }
 
     @Override
     public void initModule() {
-//        List<String > d = new ArrayList<>();
-//        d.forEach(dg -> System.out.println(dg));
-//        new Predicate<>()
-//        d.stream().filter()
-        View view = LayoutInflater.from(getContext()).inflate(getInflateResource(), this);
+        inflateView();
         mEditText = getEditWidget();
         mEditText.setOnFocusChangeListener(new OnFocusChangeListener() {
             @Override

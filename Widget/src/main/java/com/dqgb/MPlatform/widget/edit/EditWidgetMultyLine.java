@@ -45,8 +45,7 @@ public class EditWidgetMultyLine extends CommonModule {
     //输入类型
     private int textType;      // 0:普通字符；1：正整数；2：整数（正负数）3：正数（小数）；4自然数（正负）
     private int decimalDigits;  //小数位数
-    //组件标题
-    private String title;
+
     private String hint = "";
     //弹窗里的编辑框控件
     EditText dialogText;
@@ -62,7 +61,6 @@ public class EditWidgetMultyLine extends CommonModule {
         textLength = typedArray.getInt(R.styleable.widget_edit_textLenght, 100);
         textType = typedArray.getInt(R.styleable.widget_edit_textType, 0);
         decimalDigits = typedArray.getInt(R.styleable.widget_edit_dicimal_digits, 2);
-        title = typedArray.getString(R.styleable.widget_edit_title_edit);
         hint = typedArray.getString(R.styleable.widget_edit_textHint);
         //限制输入内容
         initEditText(editText);
@@ -161,11 +159,11 @@ public class EditWidgetMultyLine extends CommonModule {
 
     //限制输入内容
     private void initEditText(EditText editWidget) {
-        if (StringUtils.isEmpty(title)){
+        if (StringUtils.isEmpty(moduleTitle)){
             requirdText.setVisibility(GONE);
             textView.setVisibility(GONE);
         }
-        setTitle(title);
+        setTitle(moduleTitle);
         editWidget.setTextColor(textColor);
         if (!StringUtils.isEmpty(hint)){
             editWidget.setHint(hint);
