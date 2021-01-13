@@ -1,0 +1,28 @@
+<resources>
+
+
+
+    <style name="TreeNodeStyleCustom">
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:showDividers">middle</item>
+        <item name="android:divider">@android:drawable/divider_horizontal_bright</item>
+    </style>
+
+    <!-- 全屏dialog配置 -->
+    <style name="Full_Screen_Dialog">
+        <item name="android:windowFrame">@null</item><!-- 边框 -->
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/translate_right_to_center</item>
+        <item name="android:windowExitAnimation">@anim/translate_center_to_right</item>
+    </style>
+
+
+</resources>

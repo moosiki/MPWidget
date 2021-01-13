@@ -1,0 +1,115 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "29.0.3"
+
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    //view
+    implementation "com.jakewharton:butterknife:9.0.0"
+    annotationProcessor("com.jakewharton:butterknife-compiler:9.0.0") {
+        exclude module: 'support-annotations'
+    }
+    implementation "com.github.bmelnychuk:atv:1.2.9"
+    implementation 'com.github.johnkil.print:print:1.2.2'
+
+    //tool
+    implementation "com.blankj:utilcode:1.25.8"
+}
+
+uploadArchives { //maven插件配置
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+
+            snapshotRepository(url: MAVEN_REPO_SNAPSHOT_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+
+            repository(url: MAVEN_REPO_RELEASE_URL) {
+                authentication(userName: NEXUS_USERNAME, password: NEXUS_PASSWORD)
+            }
+
+            pom.project {
+                version '0.0.17' //版本名称 上传是不能和之前的一样，否则上传失败
+                artifactId GROUP_ID  //和前面网站上填写的一样
+                groupId GROUP  //和前面网站上填写的一样
+                packaging TYPE //填写aar
+                description DESCRIPTION //更新描述
+            }
+        }
+    }
+}
+
+
+task makeJar(type: Copy) {
+    //删除存在的
+    delete 'Widget/build/libs/MPWidget.jar'
+    //设置拷贝的文件
+    from('Widget/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes')
+    //打进jar包后的文件目录
+    into('Widget/build/libs/')
+    //将classes.jar放入build/libs/目录下
+    //include ,exclude参数来设置过滤
+    //（我们只关心classes.jar这个文件）
+    include('classes.jar')
+    //重命名
+    rename ('classes.jar', 'MPWidget.jar')
+}
+
+
+makeJar.dependsOn(build)
+
+
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.sourceFiles
+}
+
+artifacts {
+    archives androidSourcesJar
+}
+

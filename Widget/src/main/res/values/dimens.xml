@@ -1,0 +1,38 @@
+<resources>
+    <dimen name="font_10">10sp</dimen>
+    <dimen name="font_12">12sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_18">18sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_21">21sp</dimen>
+    <dimen name="font_24">24sp</dimen>
+    <dimen name="font_30">30sp</dimen>
+
+    <!-- 各种视图间的间距 -->
+    <dimen name="toolbar_padding_top">0dp</dimen>
+    <dimen name="margin_card_10dp">10dp</dimen>
+    <dimen name="margin_left_5dp">5dp</dimen>
+    <dimen name="margin_left_8dp">8dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_25dp">25dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="padding_5dp">5dp</dimen>
+    <dimen name="margin_2dp">2dp</dimen>
+    <dimen name="margin_3dp">3dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+
+    <!--各种组件的宽度-->
+    <dimen name="width_icon_24dp">24dp</dimen>
+    <dimen name="width_icon_40dp">40dp</dimen>
+    <dimen name="width_btn_54dp">54dp</dimen>
+    <dimen name="width_btn_76dp">76dp</dimen>
+
+    <!--各种组件的高度-->
+    <dimen name="mudule_title_height_24dp">24dp</dimen>
+    <dimen name="mudule_title_height_40dp">40dp</dimen>
+    <dimen name="mudule_title_height_50dp">50dp</dimen>
+</resources>

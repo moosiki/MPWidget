@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MPWidget</string>
+
+    <!--组件字符-->
+    <string name="widget_user_dialog_choose">请选择人员</string>
+    <string name="widget_edit_title">请输入内容</string>
+    <string name="widget_user_name">请输入姓名</string>
+    <string name="widget_edit_default_hint">请输入</string>
+    <string name="widget_time_dialog_choose">请选择时间:</string>
+    <string name="widget_user_choose_declear">清空</string>
+    <string name="widget_user_choose_confirm">确定</string>
+    <string name="widget_org_show_type_popup_window">popupWindow</string>
+    <string name="widget_org_show_type_bottom_sheet">bottomSheet</string>
+    <string name="widget_dialog_last">上一项</string>
+    <string name="widget_dialog_next">下一项</string>
+    <string name="module_requird_text">*</string>
+
+    <!--时间组件-->
+    <string name="date_time_format_normal">yyyy-MM-dd HH:mm:ss</string>
+    <string name="date_time_format_min">yyyy-MM-dd HH:mm</string>
+    <string name="date_time_format_hour">yyyy-MM-dd HH</string>
+    <string name="date_time_format_day">yyyy-MM-dd</string>
+    <string name="date_time_format_month">yyyy-MM</string>
+
+    <!-- icon_font -->
+    <string name="ic_check_circle_blank">&#xe03e;</string>
+</resources>

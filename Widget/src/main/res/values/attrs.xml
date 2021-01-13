@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 通用控件配置项-->
+    <declare-styleable name="common_module_option">
+        <!-- 是否必填-->
+        <attr name="required" format="boolean"/>
+        <!-- 组件输入错误时的提示信息-->
+        <attr name="error_tips" format="string"/>
+        <!-- 标题-->
+        <attr name="module_title" format="string"/>
+        <!-- 字体大小 -->
+        <attr name="module_text_size" format="dimension"/>
+        <!-- 字体颜色 -->
+        <attr name="module_text_color" format="color"/>
+        <!-- 提示信息-->
+        <attr name="module_hint" format="string"/>
+        <!-- 提示字体颜色 -->
+        <attr name="module_hint_color" format="color"/>
+        <!-- 自定义图标 -->
+        <attr name="text_icon" format="reference"/>
+        <!-- 绑定的数据实体类字段 -->
+        <attr name="module_bind_field" format="string"/>
+        <!-- 绑定的设置数据的vo类字段 -->
+        <attr name="module_value_field" format="string"/>
+    </declare-styleable>
+
+    <!-- 树形列表配置项-->
+    <declare-styleable name="tree_view">
+        <!-- 是否打开勾选模式 默认为false-->
+        <attr name="SelectionModeEnabled" format="boolean"/>
+
+        <!-- 可以进行勾选的层级 ，设置为 -1 则只勾选叶子节点，默认为0-->
+        <attr name="SelectionLevel" format="integer"/>
+
+        <!-- 是否启用2D 默认为false-->
+        <attr name="enable2D" format="boolean"/>
+
+        <!-- 启用级联勾选：勾选当前节点后是否勾选子节点 默认为false-->
+        <attr name="selectChildren" format="boolean"/>
+        <!-- 是否启用多选 默认为false-->
+        <attr name="isMultySelect" format="boolean"/>
+
+        <!-- 是否自动展开 默认为false-->
+        <attr name="isAutoExpand" format="boolean"/>
+    </declare-styleable>
+
+    <!-- 时间选择控件配置项-->
+    <declare-styleable name="widget_date_time_picker">
+        <!-- 组件标题-->
+        <attr name="title_date" format="string"/>
+        <!-- 选择时间的提示信息-->
+        <attr name="time_pick_hint" format="string"/>
+        <!-- 未选择时间时的错误提示 -->
+        <attr name="error_tips_date_time" format="string"/>
+        <!-- 是否限制只能选择当前时间之前的时间 -->
+        <attr name="is_limit_current_time" format="boolean"/>
+        <!-- 时间字体大小 -->
+        <attr name="time_font_size" format="dimension"/>
+        <!-- 时间字体颜色 -->
+        <attr name="time_font_color" format="color"/>
+        <!-- 自定义图标 -->
+        <attr name="time_text_icon" format="reference"/>
+        <!-- 时间格式-->
+        <attr name="time_format" format="string"/>
+        <!-- 是否默认选中当前时间 -->
+        <attr name="is_default_current_time" format="boolean"/>
+    </declare-styleable>
+
+    <!--编辑框控件-->
+    <declare-styleable name="widget_edit">
+        <!-- 组件标题-->
+        <attr name="title_edit" format="string"/>
+        <!--输入长度-->
+        <attr name="textLenght" format="integer"/>
+        <!--输入类型--><!-- 0:普通字符；1：正整数；2：整数（正负数）3：正数（小数）；4自然数（正负）-->
+        <attr name="textType" format="integer"/>
+        <!--小数位数，输入类型为小数时有效-->
+        <attr name="dicimal_digits" format="integer"/>
+        <!--提示内容-->
+        <attr name="textHint" format="string"/>
+        <!--是否自动获取焦点-->
+        <attr name="auto_focus" format="boolean"/>
+    </declare-styleable>
+
+
+</resources>

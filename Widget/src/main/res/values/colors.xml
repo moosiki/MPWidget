@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--列表页具体内容颜色-->
+    <!--黑色-->
+    <color name="black_65">#A6000000</color>
+    <color name="black_85">#D9000000</color>
+    <color name="black_100">#000000</color>
+
+    <color name="white">#ffffff</color>
+
+    <!-- 必选 * 的颜色-->
+    <color name="cc_red">#fff03619</color>
+
+    <!--渐变框颜色-->
+    <!--红-->
+    <!--背景-->
+    <color name="shadow_red_bg1">#FFF1F0</color>
+    <color name="shadow_red_bg2">#FFCCC7</color>
+    <!--边框-->
+    <color name="shadow_red_frame">#FF7875</color>
+    <!--黄-->
+    <!--背景-->
+    <color name="shadow_yellow_bg1">#FFFBE6</color>
+    <color name="shadow_yellow_bg2">#FFE7BA</color>
+    <!--边框-->
+    <color name="shadow_yellow_frame">#FA8C16</color>
+    <!--蓝-->
+    <!--背景-->
+    <color name="shadow_blue_bg1">#E6F7FF</color>
+    <color name="shadow_blue_bg2">#BAE7FF</color>
+    <!--边框-->
+    <color name="shadow_blue_frame">#1890FF</color>
+    <!--灰-->
+    <!--背景-->
+    <color name="shadow_grey_bg1">#FAFAFA</color>
+    <color name="shadow_grey_bg2">#ffD5DAE0</color>
+    <!--边框-->
+    <color name="shadow_grey_frame">#ffbfbfbf</color>
+    <!--绿-->
+    <!--背景-->
+    <color name="shadow_green_bg1">#F6FFED</color>
+    <color name="shadow_green_bg2">#E6FFEC</color>
+    <!--边框-->
+    <color name="shadow_green_frame">#ff52c41a</color>
+
+</resources>

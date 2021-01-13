@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Widget:jar">
+    <output-path>$PROJECT_DIR$/build/classes/artifacts/Widget_jar</output-path>
+    <root id="archive" name="Widget.jar" />
+  </artifact>
+</component>
