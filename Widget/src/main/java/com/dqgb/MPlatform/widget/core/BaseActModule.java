@@ -10,7 +10,10 @@ import android.widget.LinearLayout;
 
 import com.dqgb.MPlatform.widget.R;
 
+import butterknife.ButterKnife;
+
 /**
+ * 交互组件基础实现类
  * @author yangqiang-ds
  * @version 1.0
  * @date：2021/1/13 14:48
@@ -51,6 +54,7 @@ public abstract class BaseActModule extends LinearLayout implements ActiveModule
     @Override
     public void inflateView() {
         mView = LayoutInflater.from(getContext()).inflate(getInflateResource(), this);
+        ButterKnife.bind(mView);
     }
 
     /**

@@ -6,44 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <com.dqgb.MPlatform.widget.edit.EditWidget
+
+<!--    <com.dqgb.MPlatform.widget.edit.EditWidget
         android:id="@+id/et_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:auto_focus="true"
         app:textType = "1"
-        />
+        />-->
 
     <com.dqgb.MPlatform.widget.input.InputRowModule
         android:id="@+id/row_input1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:module_title="输入框1"
         />
 
-    <com.dqgb.MPlatform.widget.input.InputRowModule
-        android:id="@+id/row_input2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <com.dqgb.MPlatform.widget.input.InputRowModule
-        android:id="@+id/row_input3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
-
-    <com.dqgb.MPlatform.widget.input.InputColumnModule
-        android:id="@+id/col_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
 
     <LinearLayout
         android:id="@+id/ll_container_other"
@@ -55,5 +33,19 @@
             android:layout_height="wrap_content"
             android:text="其它输入框"/>
     </LinearLayout>
+
+    <com.dqgb.MPlatform.widget.view.HorizontalTitle
+        android:id="@+id/ht_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <com.dqgb.MPlatform.widget.input.InputRowModule
+            android:id="@+id/row_input2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:module_title="输入框1"
+            />
+
+    </com.dqgb.MPlatform.widget.view.HorizontalTitle>
 
 </LinearLayout>

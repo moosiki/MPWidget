@@ -55,4 +55,8 @@ public class ValidatePriorDecorate extends BaseDecorate<ActiveModule> {
         }
     }
 
+    @Override
+    public void inflateView() {
+
+    }
 }

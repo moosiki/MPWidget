@@ -68,7 +68,6 @@ public class EditWidget extends CommonModule {
         textLength = typedArray.getInt(R.styleable.widget_edit_textLenght, 100);
         textType = typedArray.getInt(R.styleable.widget_edit_textType, 0);
         decimalDigits = typedArray.getInt(R.styleable.widget_edit_dicimal_digits, 2);
-        title = typedArray.getString(R.styleable.widget_edit_title_edit);
         hint = typedArray.getString(R.styleable.widget_edit_textHint);
         autoFocus = typedArray.getBoolean(R.styleable.widget_edit_auto_focus, false);
         //限制输入内容
@@ -174,7 +173,7 @@ public class EditWidget extends CommonModule {
                            },
                     500);
         }
-        setTitle(title);
+        setTitle(moduleTitle);
         editWidget.setTextColor(textColor);
         editWidget.getPaint().setTextSize(textSize);
         if (!StringUtils.isEmpty(hint)){

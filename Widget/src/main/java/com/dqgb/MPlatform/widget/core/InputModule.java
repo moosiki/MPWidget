@@ -60,13 +60,14 @@ public  abstract class InputModule extends BaseActModule implements ActiveModule
     public void initModule() {
         inflateView();
         mEditText = getEditWidget();
-        mEditText.setOnFocusChangeListener(new OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                ToastUtils.showLong("编辑框被点击：" + mEditText.getId());
-            }
-        });
-        decorateEdit();
+
+//        mEditText.setOnFocusChangeListener(new OnFocusChangeListener() {
+//            @Override
+//            public void onFocusChange(View v, boolean hasFocus) {
+//                ToastUtils.showLong("编辑框被点击：" + mEditText.getId());
+//            }
+//        });
+//        decorateEdit();
     }
 
     /**
