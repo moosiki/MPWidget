@@ -5,5 +5,5 @@ package com.dqgb.MPlatform.widget.core;
  * @version 1.0
  * @date：2021/1/13 17:31
  */
-interface Module {
+public interface Module {
 }

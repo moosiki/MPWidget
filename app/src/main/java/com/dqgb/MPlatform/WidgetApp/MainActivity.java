@@ -30,19 +30,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        inputRowModule1 = findViewById(R.id.row_input1);
+    /*    inputRowModule1 = findViewById(R.id.row_input1);
         inputRowModule2 = findViewById(R.id.row_input2);
-        titleView = findViewById(R.id.ht_1);
+        titleView = findViewById(R.id.ht_1);*/
 //        inputRowModule2 = findViewById(R.id.row_input2);
 //        inputRowModule3 = findViewById(R.id.row_input3);
 //        inputColumnModule = findViewById(R.id.col_input);
 
-        inputRowModule1.initModule();
-        inputRowModule2.initModule();
+/*        inputRowModule1.initModule();
+        inputRowModule2.initModule();*/
 
-        View v = titleView.getChildAt(1);
+     /*   View v = titleView.getChildAt(1);
         titleView.removeViewAt(1);
-        titleView.insertContent(v);
+        titleView.insertContent(v);*/
 
 
        /* other = findViewById(R.id.ll_container_other);

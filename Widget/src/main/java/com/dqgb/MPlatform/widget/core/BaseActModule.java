@@ -34,6 +34,7 @@ public abstract class BaseActModule extends LinearLayout implements ActiveModule
     public BaseActModule(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         applyAttrs(context,attrs);
+        initModule();
     }
 
     public BaseActModule(ModuleBuilder builder, Context context) {

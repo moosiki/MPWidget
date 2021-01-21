@@ -81,5 +81,10 @@
         <attr name="auto_focus" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="view_title_wrapper">
+
+        <!--标题视图所处位置，top:顶部, left:左边-->
+        <attr name="title_position" format="string"/>
+    </declare-styleable>
 
 </resources>

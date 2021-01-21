@@ -15,7 +15,7 @@
         app:textType = "1"
         />-->
 
-    <com.dqgb.MPlatform.widget.input.InputRowModule
+<!--    <com.dqgb.MPlatform.widget.input.InputRowModule
         android:id="@+id/row_input1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,6 +46,29 @@
             app:module_title="输入框1"
             />
 
-    </com.dqgb.MPlatform.widget.view.HorizontalTitle>
+    </com.dqgb.MPlatform.widget.view.HorizontalTitle>-->
+    <com.dqgb.MPlatform.widget.view.TitleWrapper
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="111111" />
+
+        <com.dqgb.MPlatform.widget.input.InputRowModule
+            android:id="@+id/row_input3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:module_title="输入框33" />
+
+       <!-- <com.dqgb.MPlatform.widget.input.InputRowModule
+            android:id="@+id/row_input4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:module_title="输入框344" />-->
+
+
+    </com.dqgb.MPlatform.widget.view.TitleWrapper>
 
 </LinearLayout>
